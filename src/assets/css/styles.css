@@ -1,0 +1,41 @@
+html,
+body{
+    margin: 0px;
+    background-color: red;
+    color: yellow;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:black;
+    color: yellow;
+    padding: 20px;
+}
+
+.Carta{
+    position: relative;
+    left: 100px;
+    margin-left: -75px;
+    width: 200px;
+    height: 240px;
+}
+
+#jugador-cartas,
+#computadora-cartas{
+    height: 240px;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+}
+
+.logo-principal{
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    height: 120px;
+
+}
