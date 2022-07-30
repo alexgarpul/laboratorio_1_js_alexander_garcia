@@ -9,23 +9,32 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-<header class="titulo" ><img class="logo-principal" src="assets/logo/logo_1022.jpg" alt=""><img class="logo" src="assets/logo/logo2.jpg" alt=""> BlackJack <img class="logo" src="assets/logo/logo2.jpg" alt=""></header>
+<header class="cabecera" >
+    <div class="logo-principal">
+        <img src="assets/logo/logo_1022.jpg" alt="">
+    </div>
+    <div class="logo-segundario">
+        <img src="assets/logo/logo2.jpg" alt="">
+        <h1>BlackJack</h1>
+        <img src="assets/logo/logo2.jpg" alt="">
+    </div>
+</header>
 <div>
     <div class="col text-center pt-2">
-        <button class="btn btn-danger">Nuevo juego</button>
-        <button class="btn btn-primary">Pedir Carta</button>
-        <button class="btn btn-primary">Detener</button>
+        <button id="btn-nuevo" class="btn btn-danger">Nuevo juego</button>
+        <button id="btn-pedir" class="btn btn-primary">Pedir Carta</button>
+        <button id="btn-detener" class="btn btn-primary">Detener</button>
 
     </div>
 
     <div class="row container">
         <div class="col">   
             <h1>jugador 1 - <small>0</small></h1>
-            <div id="jugador-cartas">
-                <img class="Carta" src="assets/cartas/KC.png" alt="">
+             <div id="jugador-cartas">
+                <!-- <img class="Carta" src="assets/cartas/KC.png" alt=""> 
                 <img class="Carta" src="assets/cartas/JC.png" alt="">
                 <img class="Carta" src="assets/cartas/QC.png" alt="">
-                <img class="Carta" src="assets/cartas/AC.png" alt="">
+                <img class="Carta" src="assets/cartas/AC.png" alt="">  -->
             </div>
         </div>
     </div>
@@ -34,10 +43,10 @@
         <div class="col">   
             <h1>computadora - <small>0</small></h1>
             <div id="computadora-cartas">
-                <img class="Carta" src="assets/cartas/KH.png" alt="">
+                <!-- <img class="Carta" src="assets/cartas/KH.png" alt="">
                 <img class="Carta" src="assets/cartas/JH.png" alt="">
                 <img class="Carta" src="assets/cartas/QH.png" alt="">
-                <img class="Carta" src="assets/cartas/AH.png" alt="">
+                <img class="Carta" src="assets/cartas/AH.png" alt=""> -->
           </div>
       </div>
     <div>
@@ -45,5 +54,8 @@
 
 <script src="assets/js/underscore.js"></script>
 <script src="assets/js/juego.js"></script>
+<footer>
+    <img src="" alt=""><a href="">c</a>
+</footer>
 </body>
 </html>

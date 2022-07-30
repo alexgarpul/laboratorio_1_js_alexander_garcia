@@ -1,25 +1,23 @@
 html,
 body{
     margin: 0px;
-    background-color: red;
+    background-color: 
+    
+    rgba(0, 79, 116, 0.966);
     color: yellow;
 }
 
-.titulo{
+.logo-principal {
     text-align: center;
-    font-size: 80px;
-    font-family: 'Times New Roman', Times, serif;
-    background-color:black;
-    color: yellow;
-    padding: 20px;
 }
-
-.Carta{
+.logo-segundario h1 {
+    font-family: cursive;
+}
+.carta{
     position: relative;
+    width: 150px;
     left: 100px;
     margin-left: -75px;
-    width: 200px;
-    height: 240px;
 }
 
 #jugador-cartas,
@@ -27,15 +25,21 @@ body{
     height: 240px;
 }
 
-.logo{
-    width: 60px;
-    height: 60px;
-}
+.cabecera {
+    width: 100%;
+    height: 320px;
+    background-color: black;
 
-.logo-principal{
+}
+.logo-segundario {
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 180px;
-    height: 120px;
+    align-items: center;
+}
+.logo-segundario img{
+    width: 80px;
+    height: 100%;
+    object-fit: cover;
 
 }
