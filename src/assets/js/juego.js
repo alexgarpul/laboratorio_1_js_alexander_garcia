@@ -1,9 +1,5 @@
-/**
- * 2C = 2 de trebol (clubs)
- * 2D = 2 de diamante (diamont)
- * 2H = 2 de corazones (heart)
- * 2S = 2 de picas (spades)
- */
+;(()=>{
+
 
 let baraja = []
 const tipos = ['C', 'D', 'H', 'S']
@@ -13,15 +9,20 @@ let puntosJugador = 0
 let puntosComputadora = 0
 
 //referencias al HTML
-const btnPedir = document.querySelector('#btn-pedir')
-// const smallPuntajeJugador = document.querySelector('small')
-const btnDetener = document.querySelector('#btn-detener')
-const btnNuevo = document.querySelector('#btn-nuevo')
-const puntosHTML = document.querySelectorAll('small')
-const divJugadorCartas = document.querySelector('#jugador-cartas')
-const divComputadoraCartas = document.querySelector('#computadora-cartas')
+const btnPedir = document.querySelector('#btn-pedir'),
+btnDetener = document.querySelector('#btn-detener'),
+btnNuevo = document.querySelector('#btn-nuevo'),
+puntosHTML = document.querySelectorAll('small'),
+divJugadorCartas = document.querySelector('#jugador-cartas'),
+divComputadoraCartas = document.querySelector('#computadora-cartas')
+
+const inicializarJuego = () => {
+    baraja = crearBaraja()
+}
 
 const crearBaraja = () => {
+    //se reinicializa la baraja
+    baraja=[]
     //se puebla el arreglo con los números y tipos de la baraja
     for(let i = 2; i <= 10; i++){
         for(let tipo of tipos){
@@ -34,33 +35,25 @@ const crearBaraja = () => {
             baraja.push(letra + tipo)
         }
     }
-    baraja = _.shuffle(baraja)
+    return _.shuffle(baraja)
 }
 
-crearBaraja()
-// console.log(baraja)
+// crearBaraja()
 
-//esta funcion pide una carta
 
 const pedirCarta = () => {
     const barajaTamanio = baraja.length
     if(barajaTamanio === 0) throw 'No hay cartas en la baraja'
-
-    const index = Math.floor(Math.random() * barajaTamanio)
-    // console.log({index})
-    const carta = baraja.splice(index, 1)[0]
-    // console.log({ carta })
-    // console.log(baraja)
-    return carta
+  
+    return baraja.splice(Math.floor(Math.random() * barajaTamanio), 1)[0]
 }
 
-// pedirCarta()
 
 const valorCarta = (carta) =>{
     const valor = carta.substring(0, carta.length-1)
     return isNaN(valor) ? (valor === 'A' ? 11 : 10) : Number(valor)
 }
-//turno de la computadora
+
 const turnoComputadora = (puntosMinimos) => {
     do {
         const carta = pedirCarta()
@@ -84,7 +77,7 @@ const turnoComputadora = (puntosMinimos) => {
 
     },100)
 }
-// console.log(valorCarta(pedirCarta()))
+
 
 //Eventos
 btnPedir.addEventListener('click', ()=> {
@@ -121,6 +114,7 @@ btnDetener.addEventListener('click', () =>{
 })
 
 btnNuevo.addEventListener('click', () => {
+    inicializarJuego()
     puntosJugador = 0
     puntosComputadora = 0
     btnPedir.disabled = false
@@ -132,3 +126,4 @@ btnNuevo.addEventListener('click', () => {
     console.clear()
     crearBaraja()
 })
+})()

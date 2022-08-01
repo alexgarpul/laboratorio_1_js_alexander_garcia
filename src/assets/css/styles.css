@@ -43,3 +43,16 @@ body{
     object-fit: cover;
 
 }
+
+.alien{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    top: 100px;
+}
+.ph-alien-fill {
+    color: aliceblue;
+    font-size: 5rem;
+}
