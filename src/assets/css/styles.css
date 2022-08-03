@@ -56,3 +56,29 @@ body{
     color: aliceblue;
     font-size: 5rem;
 }
+
+.redes{
+    display: flex;
+    justify-content: center;
+    margin: 5rem;
+}
+
+.ph-facebook-logo-fill {
+font-size: 8rem;
+}
+
+.ph-instagram-logo-fill {
+    font-size: 8rem;
+}
+
+.ph-github-logo-fill{
+    font-size: 8rem;
+}
+
+.ph-twitter-logo-fill{
+    font-size: 8rem;
+}
+
+.titulo{
+text-align: center;
+}
